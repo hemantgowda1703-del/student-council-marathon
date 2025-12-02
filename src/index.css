@@ -2,95 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Premium Marathon Design System */
+/* Inspired by Tracksmith, Orchard Street Runners, The Speed Project */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Colors - Premium Heritage Palette */
+    --background: 40 20% 96%; /* Off-white cream #F6F5F3 */
+    --foreground: 240 10% 7%; /* Deep charcoal #121212 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 20% 96%;
+    --card-foreground: 240 10% 7%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 20% 96%;
+    --popover-foreground: 240 10% 7%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Heritage Burgundy */
+    --primary: 356 65% 33%; /* #8B1E23 */
+    --primary-foreground: 40 20% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Deep Navy */
+    --secondary: 240 50% 8%; /* #0A0A1C */
+    --secondary-foreground: 40 20% 96%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 40 10% 90%;
+    --muted-foreground: 240 5% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Gold/Tan */
+    --accent: 38 42% 60%; /* #C9A66B */
+    --accent-foreground: 240 10% 7%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 40 20% 96%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 10% 85%;
+    --input: 40 10% 85%;
+    --ring: 356 65% 33%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom Design Tokens */
+    --cream: 40 20% 96%;
+    --charcoal: 240 10% 7%;
+    --navy: 240 50% 8%;
+    --burgundy: 356 65% 33%;
+    --gold: 38 42% 60%;
+    --warm-gray: 30 5% 50%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, hsla(240, 50%, 8%, 0) 0%, hsla(240, 50%, 8%, 0.9) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(var(--cream)) 0%, hsl(40, 15%, 93%) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsla(240, 10%, 7%, 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsla(240, 10%, 7%, 0.15);
+    --shadow-dramatic: 0 20px 60px -12px hsla(240, 10%, 7%, 0.25);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Typography Scale */
+    --font-display: 'Oswald', sans-serif;
+    --font-editorial: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Letter Spacing */
+    --tracking-tight: -0.02em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.05em;
+    --tracking-wider: 0.1em;
+    --tracking-widest: 0.2em;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 240 10% 7%;
+    --foreground: 40 20% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 15% 10%;
+    --card-foreground: 40 20% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 15% 10%;
+    --popover-foreground: 40 20% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 356 65% 45%;
+    --primary-foreground: 40 20% 96%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 40 10% 15%;
+    --secondary-foreground: 40 20% 96%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 40 10% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 38 42% 50%;
+    --accent-foreground: 40 20% 96%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
+    --ring: 356 65% 45%;
   }
 }
 
@@ -99,7 +104,169 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  /* Typography Classes */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+  }
+
+  .font-editorial {
+    font-family: var(--font-editorial);
+    font-weight: 400;
+    letter-spacing: var(--tracking-tight);
+    text-transform: none;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+}
+
+@layer components {
+  /* Athletic Button Styles */
+  .btn-athletic {
+    @apply inline-flex items-center justify-center px-8 py-4 text-sm font-semibold tracking-widest uppercase transition-all duration-300;
+    font-family: var(--font-display);
+    letter-spacing: 0.15em;
+  }
+
+  .btn-athletic-primary {
+    @apply btn-athletic bg-primary text-primary-foreground hover:bg-primary/90;
+  }
+
+  .btn-athletic-outline {
+    @apply btn-athletic border-2 border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background;
+  }
+
+  .btn-athletic-ghost {
+    @apply btn-athletic bg-transparent text-foreground hover:bg-foreground/5;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-20 md:py-32 lg:py-40;
+  }
+
+  .section-padding-sm {
+    @apply py-12 md:py-20 lg:py-24;
+  }
+
+  /* Container */
+  .container-editorial {
+    @apply mx-auto max-w-7xl px-6 md:px-8 lg:px-12;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-4xl px-6 md:px-8;
+  }
+
+  /* Text Reveal Animation */
+  .text-reveal {
+    @apply overflow-hidden;
+  }
+
+  .text-reveal-inner {
+    @apply transform translate-y-full opacity-0 transition-all duration-700 ease-out;
+  }
+
+  .text-reveal.is-visible .text-reveal-inner {
+    @apply translate-y-0 opacity-100;
+  }
+
+  /* Image Hover */
+  .image-hover {
+    @apply overflow-hidden;
+  }
+
+  .image-hover img {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .image-hover:hover img {
+    @apply scale-105;
+  }
+
+  /* Divider */
+  .divider {
+    @apply h-px w-full bg-border;
+  }
+
+  .divider-thick {
+    @apply h-0.5 w-full bg-foreground;
+  }
+
+  /* Label Style */
+  .label-athletic {
+    @apply text-xs font-semibold tracking-widest uppercase text-muted-foreground;
+    font-family: var(--font-display);
+    letter-spacing: 0.2em;
+  }
+
+  /* Card Styles */
+  .card-premium {
+    @apply relative overflow-hidden bg-card p-8 transition-shadow duration-300 hover:shadow-elevated;
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Scroll Progress */
+  .scroll-progress {
+    @apply fixed left-0 top-0 h-0.5 w-full origin-left bg-primary;
+    transform: scaleX(0);
+    z-index: 9999;
+  }
+}
+
+@layer utilities {
+  /* Custom Tracking */
+  .tracking-athletic {
+    letter-spacing: 0.15em;
+  }
+
+  .tracking-editorial {
+    letter-spacing: -0.02em;
+  }
+
+  /* Gradient Overlays */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  /* Animation Delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-600 { animation-delay: 600ms; }
+
+  /* Grayscale filter for sponsors */
+  .grayscale-hover {
+    @apply grayscale transition-all duration-300 hover:grayscale-0;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay::after {
+    content: '';
+    @apply pointer-events-none absolute inset-0 opacity-[0.02];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   }
 }
