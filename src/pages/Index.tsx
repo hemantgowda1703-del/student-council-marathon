@@ -1,5 +1,6 @@
 import Header from "@/components/marathon/Header";
 import Hero from "@/components/marathon/Hero";
+import Countdown from "@/components/marathon/Countdown";
 import About from "@/components/marathon/About";
 import RaceCategories from "@/components/marathon/RaceCategories";
 import RouteMap from "@/components/marathon/RouteMap";
@@ -14,6 +15,7 @@ const Index = () => {
     <main className="min-h-screen">
       <Header />
       <Hero />
+      <Countdown />
       <section id="about">
         <About />
       </section>
