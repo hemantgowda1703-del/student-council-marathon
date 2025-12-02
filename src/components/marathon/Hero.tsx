@@ -55,7 +55,7 @@ const Hero = () => {
           className="mb-6"
         >
           <span className="label-athletic text-cream/70">
-            March 15, 2025 • City Downtown
+            March 15, 2026 • City Downtown
           </span>
         </motion.div>
 
@@ -77,7 +77,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
             className="font-display text-display-xl font-bold uppercase tracking-wide text-primary"
           >
-            Marathon 2025
+            Marathon 2026
           </motion.h1>
         </div>
 

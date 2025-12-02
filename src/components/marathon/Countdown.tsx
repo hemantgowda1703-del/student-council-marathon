@@ -15,7 +15,7 @@ const Countdown = () => {
   ]);
 
   useEffect(() => {
-    const targetDate = new Date("2025-03-15T06:00:00");
+    const targetDate = new Date("2026-03-15T06:00:00");
 
     const calculateTimeLeft = () => {
       const now = new Date();
@@ -112,7 +112,7 @@ const Countdown = () => {
           transition={{ duration: 0.5, delay: 0.7 }}
           className="mt-6 text-center font-display text-sm md:text-base tracking-widest text-cream/60 uppercase"
         >
-          March 15, 2025 • 6:00 AM
+          March 15, 2026 • 6:00 AM
         </motion.p>
       </div>
     </section>
