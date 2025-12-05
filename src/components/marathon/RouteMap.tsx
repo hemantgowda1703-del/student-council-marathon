@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { MapPin, Flag, Circle } from "lucide-react";
+import { useRef, useState } from "react";
+import { MapPin, Flag, Circle, X, ZoomIn } from "lucide-react";
 import routeMapImage from "@/assets/route-map-actual.png";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "@/components/ui/dialog";
 
 const legendItems = [
   { icon: MapPin, label: "Start Point (Joggers Park)", color: "text-red-500" },
@@ -13,6 +18,7 @@ const legendItems = [
 const RouteMap = () => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+  const [selectedMap, setSelectedMap] = useState<string | null>(null);
 
   return (
     <section
@@ -65,12 +71,18 @@ const RouteMap = () => {
                 5K Route
               </span>
             </div>
-            <div className="relative overflow-hidden border border-border bg-cream/50">
+            <div 
+              className="relative overflow-hidden border border-border bg-cream/50 cursor-pointer group"
+              onClick={() => setSelectedMap("5K")}
+            >
               <img
                 src={routeMapImage}
                 alt="5K Marathon route map - Joggers Park to TSEC"
-                className="h-auto w-full"
+                className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-300 flex items-center justify-center">
+                <ZoomIn className="h-10 w-10 text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
               <div className="absolute bottom-4 left-4 bg-background/90 px-4 py-2 backdrop-blur-sm">
                 <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">
                   Start: Joggers Park
@@ -100,12 +112,18 @@ const RouteMap = () => {
                 10K Route
               </span>
             </div>
-            <div className="relative overflow-hidden border border-border bg-cream/50">
+            <div 
+              className="relative overflow-hidden border border-border bg-cream/50 cursor-pointer group"
+              onClick={() => setSelectedMap("10K")}
+            >
               <img
                 src={routeMapImage}
                 alt="10K Marathon route map - Extended route through Bandra"
-                className="h-auto w-full"
+                className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-300 flex items-center justify-center">
+                <ZoomIn className="h-10 w-10 text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
               <div className="absolute bottom-4 left-4 bg-background/90 px-4 py-2 backdrop-blur-sm">
                 <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">
                   Start: Joggers Park
@@ -181,6 +199,33 @@ const RouteMap = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Map Modal */}
+      <Dialog open={!!selectedMap} onOpenChange={() => setSelectedMap(null)}>
+        <DialogContent className="max-w-4xl p-0 border-none bg-transparent">
+          <DialogTitle className="sr-only">{selectedMap} Route Map</DialogTitle>
+          <div className="relative">
+            <button
+              onClick={() => setSelectedMap(null)}
+              className="absolute -top-12 right-0 p-2 text-white hover:text-primary transition-colors"
+            >
+              <X className="h-8 w-8" />
+            </button>
+            <div className="bg-background p-2 rounded-lg">
+              <div className="bg-primary px-4 py-2 mb-2 text-center">
+                <span className="font-display text-lg uppercase tracking-wider text-primary-foreground font-bold">
+                  {selectedMap} Route
+                </span>
+              </div>
+              <img
+                src={routeMapImage}
+                alt={`${selectedMap} Marathon route map`}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
