@@ -82,11 +82,6 @@ const Registration = () => {
             className="mb-10 flex items-center justify-center gap-8 text-center"
           >
             <div>
-              <span className="block font-display text-3xl font-bold text-foreground">₹200</span>
-              <span className="font-body text-sm text-muted-foreground">3K Run</span>
-            </div>
-            <div className="h-10 w-px bg-border" />
-            <div>
               <span className="block font-display text-3xl font-bold text-foreground">₹350</span>
               <span className="font-body text-sm text-muted-foreground">5K Run</span>
             </div>
