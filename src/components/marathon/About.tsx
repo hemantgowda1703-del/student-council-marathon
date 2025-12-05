@@ -65,19 +65,31 @@ const About = () => {
               </p>
             </motion.div>
 
+            {/* Past Footfall Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.55 }}
+              className="mt-8"
+            >
+              <span className="label-athletic mb-4 block text-muted-foreground">
+                Past Footfall
+              </span>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-8 flex items-center gap-8"
+              className="mt-4 flex items-center gap-8"
             >
               <div className="flex flex-col">
                 <span className="font-display text-4xl font-bold text-primary">500+</span>
-                <span className="font-body text-sm text-muted-foreground">Expected Runners</span>
+                <span className="font-body text-sm text-muted-foreground">Runners</span>
               </div>
               <div className="h-12 w-px bg-border" />
               <div className="flex flex-col">
-                <span className="font-display text-4xl font-bold text-primary">3</span>
+                <span className="font-display text-4xl font-bold text-primary">2</span>
                 <span className="font-body text-sm text-muted-foreground">Race Categories</span>
               </div>
               <div className="h-12 w-px bg-border" />
