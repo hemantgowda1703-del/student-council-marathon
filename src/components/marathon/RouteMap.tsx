@@ -1,15 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { MapPin, Droplets, Heart, Flag, CircleDot } from "lucide-react";
-import routeMapImage from "@/assets/route-map.jpg";
+import { MapPin, Flag, Circle } from "lucide-react";
+import routeMapImage from "@/assets/route-map-actual.png";
 
 const legendItems = [
-  { icon: Flag, label: "Start Line", color: "text-primary" },
-  { icon: CircleDot, label: "Finish Line", color: "text-primary" },
-  { icon: MapPin, label: "Checkpoints", color: "text-gold" },
-  { icon: Droplets, label: "Hydration Stations", color: "text-blue-500" },
-  { icon: Heart, label: "Medical Posts", color: "text-red-500" },
+  { icon: MapPin, label: "Start Point (Joggers Park)", color: "text-red-500" },
+  { icon: Flag, label: "End Point (TSEC)", color: "text-primary" },
+  { icon: Circle, label: "Route Markers", color: "text-blue-500" },
 ];
 
 const RouteMap = () => {
@@ -49,9 +47,8 @@ const RouteMap = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-4 max-w-2xl font-body text-base text-muted-foreground"
           >
-            Our carefully designed course takes you through the heart of downtown,
-            featuring a mix of scenic boulevards and energetic commercial districts.
-            Every kilometer is supported.
+            Our carefully designed course takes you through Bandra West,
+            featuring scenic routes past Joggers Park, Pali Market, and through the vibrant streets of Mumbai.
           </motion.p>
         </div>
 
@@ -71,17 +68,17 @@ const RouteMap = () => {
             <div className="relative overflow-hidden border border-border bg-cream/50">
               <img
                 src={routeMapImage}
-                alt="5K Marathon route map"
+                alt="5K Marathon route map - Joggers Park to TSEC"
                 className="h-auto w-full"
               />
               <div className="absolute bottom-4 left-4 bg-background/90 px-4 py-2 backdrop-blur-sm">
                 <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">
-                  Start: City Hall Plaza
+                  Start: Joggers Park
                 </span>
               </div>
               <div className="absolute bottom-4 right-4 bg-background/90 px-4 py-2 backdrop-blur-sm">
                 <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">
-                  Finish: Central Park
+                  Finish: TSEC
                 </span>
               </div>
               <div className="absolute top-4 right-4 bg-primary px-4 py-2">
@@ -106,17 +103,17 @@ const RouteMap = () => {
             <div className="relative overflow-hidden border border-border bg-cream/50">
               <img
                 src={routeMapImage}
-                alt="10K Marathon route map"
+                alt="10K Marathon route map - Extended route through Bandra"
                 className="h-auto w-full"
               />
               <div className="absolute bottom-4 left-4 bg-background/90 px-4 py-2 backdrop-blur-sm">
                 <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">
-                  Start: City Hall Plaza
+                  Start: Joggers Park
                 </span>
               </div>
               <div className="absolute bottom-4 right-4 bg-background/90 px-4 py-2 backdrop-blur-sm">
                 <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">
-                  Finish: Memorial Park
+                  Finish: TSEC
                 </span>
               </div>
               <div className="absolute top-4 right-4 bg-primary px-4 py-2">
@@ -140,7 +137,7 @@ const RouteMap = () => {
             <h3 className="mb-6 font-display text-sm uppercase tracking-widest text-foreground">
               Map Legend
             </h3>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            <div className="flex flex-wrap gap-6">
               {legendItems.map((item, index) => (
                 <motion.div
                   key={item.label}
@@ -152,7 +149,7 @@ const RouteMap = () => {
                   <div className="flex h-10 w-10 items-center justify-center border border-border bg-background">
                     <item.icon className={`h-5 w-5 ${item.color}`} />
                   </div>
-                  <span className="font-body text-xs text-foreground">{item.label}</span>
+                  <span className="font-body text-sm text-foreground">{item.label}</span>
                 </motion.div>
               ))}
             </div>
@@ -163,22 +160,22 @@ const RouteMap = () => {
             <h4 className="mb-4 font-display text-sm uppercase tracking-widest text-foreground">
               Course Highlights
             </h4>
-            <ul className="grid grid-cols-2 gap-2 font-body text-sm text-muted-foreground">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 font-body text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <span className="text-primary">•</span>
-                Flat, fast course through downtown
+                Scenic route through Bandra West
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary">•</span>
-                Hydration every 2 kilometers
+                Passes Pali Market & G7 Multiplex
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary">•</span>
-                Crowd support throughout the route
+                Hydration stations along the route
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary">•</span>
-                Professional timing at all checkpoints
+                Medical support at checkpoints
               </li>
             </ul>
           </div>
