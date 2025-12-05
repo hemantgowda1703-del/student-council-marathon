@@ -5,19 +5,11 @@ import { ArrowRight } from "lucide-react";
 
 const categories = [
   {
-    distance: "3K",
-    name: "Fun Run",
-    description: "Perfect for beginners and families. A welcoming introduction to organized running.",
-    time: "Approx. 20-35 min",
-    fee: "₹200",
-  },
-  {
     distance: "5K",
     name: "Community Run",
     description: "The classic distance. Challenge yourself while enjoying the full race experience.",
     time: "Approx. 25-45 min",
     fee: "₹350",
-    featured: true,
   },
   {
     distance: "10K",
@@ -25,6 +17,7 @@ const categories = [
     description: "For experienced runners seeking a real test. Push your limits on our signature course.",
     time: "Approx. 45-75 min",
     fee: "₹500",
+    featured: true,
   },
 ];
 
@@ -68,7 +61,7 @@ const RaceCategories = () => {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid gap-6 md:grid-cols-3 md:gap-8">
+        <div className="grid gap-6 md:grid-cols-2 md:gap-8 max-w-4xl mx-auto">
           {categories.map((category, index) => (
             <motion.div
               key={category.distance}
