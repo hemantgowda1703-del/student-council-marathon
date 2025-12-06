@@ -48,9 +48,7 @@ const Hero = () => {
         duration: 0.6,
         delay: 0.2
       }} className="mb-6">
-          <span className="label-athletic text-cream/70">
-            March 15, 2026 • City Downtown
-          </span>
+          <span className="label-athletic text-cream/70">FEBRUARY 8, 2026 • CITY DOWNTOWN</span>
         </motion.div>
 
         {/* Main Title */}
