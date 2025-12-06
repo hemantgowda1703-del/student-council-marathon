@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Mail, MapPin, Facebook, Twitter } from "lucide-react";
+import { Instagram, Mail, MapPin, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -86,20 +86,12 @@ const Footer = () => {
             <span className="font-body text-sm text-cream/50">Follow Us On</span>
             <div className="flex items-center gap-3">
               <a
-                href="https://facebook.com"
+                href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cream/70 transition-colors duration-300 hover:text-cream"
               >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cream/70 transition-colors duration-300 hover:text-cream"
-              >
-                <Twitter className="h-5 w-5" />
+                <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="https://instagram.com"
