@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Mail, MapPin } from "lucide-react";
+import { Instagram, Mail, MapPin, Facebook, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -82,25 +82,34 @@ const Footer = () => {
             © 2025 Student Council Marathon. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-6">
-            <a
-              href="#"
-              className="font-body text-xs text-cream/30 transition-colors duration-300 hover:text-cream/60"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="font-body text-xs text-cream/30 transition-colors duration-300 hover:text-cream/60"
-            >
-              Terms of Service
-            </a>
-            <a
-              href="#"
-              className="font-body text-xs text-cream/30 transition-colors duration-300 hover:text-cream/60"
-            >
-              Cookie Policy
-            </a>
+          <div className="flex items-center gap-4">
+            <span className="font-body text-sm text-cream/50">Follow Us On</span>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream/70 transition-colors duration-300 hover:text-cream"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream/70 transition-colors duration-300 hover:text-cream"
+              >
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream/70 transition-colors duration-300 hover:text-cream"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
 
