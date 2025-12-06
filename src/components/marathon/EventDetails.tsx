@@ -7,8 +7,8 @@ const details = [
   {
     icon: Calendar,
     label: "Date",
-    value: "March 15, 2025",
-    sublabel: "Saturday",
+    value: "February 8, 2026",
+    sublabel: "Sunday",
   },
   {
     icon: Clock,
