@@ -8,11 +8,11 @@ import galleryImage4 from "@/assets/gallery-4.jpg";
 import galleryImage5 from "@/assets/gallery-5.jpg";
 
 const images = [
-  { src: galleryImage1, alt: "Runner on city street", span: "row-span-2" },
+  { src: galleryImage1, alt: "Runner on city street", span: "md:col-span-2 md:row-span-2" },
   { src: galleryImage2, alt: "Finish line celebration", span: "" },
   { src: galleryImage3, alt: "Aerial view of runners", span: "" },
-  { src: galleryImage4, alt: "Close-up of runner's feet", span: "col-span-2" },
-  { src: galleryImage5, alt: "Runner at dawn", span: "row-span-2" },
+  { src: galleryImage4, alt: "Close-up of runner's feet", span: "" },
+  { src: galleryImage5, alt: "Runner at dawn", span: "" },
 ];
 
 const Gallery = () => {
@@ -57,14 +57,14 @@ const Gallery = () => {
         </div>
 
         {/* Masonry Grid */}
-        <div className="grid auto-rows-[200px] grid-cols-2 gap-4 md:auto-rows-[250px] md:grid-cols-4 md:gap-6">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
           {images.map((image, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
-              className={`image-hover group relative overflow-hidden ${image.span}`}
+              className={`image-hover group relative overflow-hidden aspect-square ${image.span}`}
             >
               <img
                 src={image.src}
