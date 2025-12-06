@@ -56,7 +56,7 @@ const Header = () => {
         }} className="flex flex-col">
             <span className="font-display text-lg font-bold uppercase tracking-widest text-cream">TSEC MARATHON</span>
             <span className="font-display text-[10px] uppercase tracking-[0.3em] text-cream/50">
-              2025
+              2026
             </span>
           </a>
 
