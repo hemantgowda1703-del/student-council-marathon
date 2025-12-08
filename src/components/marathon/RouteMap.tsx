@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { MapPin, Flag, Circle, X, ZoomIn } from "lucide-react";
-import routeMapImage from "@/assets/route-map-actual.png";
+import routeMap5K from "@/assets/route-map-5k.png";
+import routeMap10K from "@/assets/route-map-10k.png";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 
 const legendItems = [
-  { icon: MapPin, label: "Start Point (Joggers Park)", color: "text-red-500" },
+  { icon: MapPin, label: "Start Point (TSEC)", color: "text-red-500" },
   { icon: Flag, label: "End Point (TSEC)", color: "text-primary" },
   { icon: Circle, label: "Route Markers", color: "text-blue-500" },
 ];
@@ -53,8 +54,8 @@ const RouteMap = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-4 max-w-2xl font-body text-base text-muted-foreground"
           >
-            Our carefully designed course takes you through Bandra West,
-            featuring scenic routes past Joggers Park, Pali Market, and through the vibrant streets of Mumbai.
+            Our carefully designed courses start and end at Thadomal Shahani Engineering College, Bandra West,
+            featuring scenic routes past Joggers Park, Bandra Fort, and through the vibrant streets of Mumbai.
           </motion.p>
         </div>
 
@@ -76,8 +77,8 @@ const RouteMap = () => {
               onClick={() => setSelectedMap("5K")}
             >
               <img
-                src={routeMapImage}
-                alt="5K Marathon route map - Joggers Park to TSEC"
+                src={routeMap5K}
+                alt="5K Marathon route map - TSEC to Joggers Park and back"
                 className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-300 flex items-center justify-center">
@@ -85,12 +86,12 @@ const RouteMap = () => {
               </div>
               <div className="absolute bottom-4 left-4 bg-background/90 px-4 py-2 backdrop-blur-sm">
                 <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">
-                  Start: Joggers Park
+                  Start: TSEC, Bandra
                 </span>
               </div>
               <div className="absolute bottom-4 right-4 bg-background/90 px-4 py-2 backdrop-blur-sm">
                 <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">
-                  Finish: TSEC
+                  Via: Joggers Park
                 </span>
               </div>
               <div className="absolute top-4 right-4 bg-primary px-4 py-2">
@@ -117,8 +118,8 @@ const RouteMap = () => {
               onClick={() => setSelectedMap("10K")}
             >
               <img
-                src={routeMapImage}
-                alt="10K Marathon route map - Extended route through Bandra"
+                src={routeMap10K}
+                alt="10K Marathon route map - TSEC to Bandra Fort and back"
                 className="h-auto w-full transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-300 flex items-center justify-center">
@@ -126,12 +127,12 @@ const RouteMap = () => {
               </div>
               <div className="absolute bottom-4 left-4 bg-background/90 px-4 py-2 backdrop-blur-sm">
                 <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">
-                  Start: Joggers Park
+                  Start: TSEC, Bandra
                 </span>
               </div>
               <div className="absolute bottom-4 right-4 bg-background/90 px-4 py-2 backdrop-blur-sm">
                 <span className="font-display text-xs uppercase tracking-wider text-muted-foreground">
-                  Finish: TSEC
+                  Via: Bandra Fort
                 </span>
               </div>
               <div className="absolute top-4 right-4 bg-primary px-4 py-2">
@@ -218,7 +219,7 @@ const RouteMap = () => {
                 </span>
               </div>
               <img
-                src={routeMapImage}
+                src={selectedMap === "5K" ? routeMap5K : routeMap10K}
                 alt={`${selectedMap} Marathon route map`}
                 className="w-full h-auto"
               />

@@ -66,7 +66,7 @@ const Footer = () => {
               <div className="flex items-start gap-3 text-cream/50">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0" />
                 <span className="font-body text-sm">
-                  City Hall Plaza, Downtown District
+                  Thadomal Shahani Engineering College, Bandra (West), Mumbai
                 </span>
               </div>
             </div>
@@ -79,7 +79,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="font-body text-xs text-cream/30">
-            © 2025 Student Council Marathon. All rights reserved.
+            © 2026 Student Council Marathon. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4">

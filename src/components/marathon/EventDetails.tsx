@@ -19,8 +19,8 @@ const details = [
   {
     icon: MapPin,
     label: "Location",
-    value: "City Hall Plaza",
-    sublabel: "Downtown District",
+    value: "TSEC, Bandra (West)",
+    sublabel: "Thadomal Shahani Engineering College",
   },
   {
     icon: Users,
