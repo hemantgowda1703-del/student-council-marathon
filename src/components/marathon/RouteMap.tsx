@@ -203,12 +203,12 @@ const RouteMap = () => {
 
       {/* Map Modal */}
       <Dialog open={!!selectedMap} onOpenChange={() => setSelectedMap(null)}>
-        <DialogContent className="max-w-4xl p-0 border-none bg-transparent">
+        <DialogContent className="max-w-5xl w-[95vw] max-h-[90vh] p-0 border-none bg-transparent overflow-auto">
           <DialogTitle className="sr-only">{selectedMap} Route Map</DialogTitle>
           <div className="relative">
             <button
               onClick={() => setSelectedMap(null)}
-              className="absolute -top-12 right-0 p-2 text-white hover:text-primary transition-colors"
+              className="absolute -top-12 right-0 p-2 text-white hover:text-primary transition-colors z-10"
             >
               <X className="h-8 w-8" />
             </button>
@@ -221,7 +221,7 @@ const RouteMap = () => {
               <img
                 src={selectedMap === "5K" ? routeMap5K : routeMap10K}
                 alt={`${selectedMap} Marathon route map`}
-                className="w-full h-auto"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
