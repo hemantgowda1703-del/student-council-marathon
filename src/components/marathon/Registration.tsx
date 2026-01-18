@@ -18,7 +18,7 @@ const raceDetails = [
       start: "Thadomal Shahani Engineering College, Bandra (West)",
       end: "Along Joggers Park, Bandra (West) return to TSEC",
     },
-    fees: { regular: 400, defence: 350 },
+    fees: { regular: 450, defence: 350 },
     prizes: {
       male: [
         { position: "1st", cash: 3000 },

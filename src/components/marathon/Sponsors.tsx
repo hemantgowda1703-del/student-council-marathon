@@ -2,16 +2,14 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-// Placeholder sponsor logos - using text representations
+// Past sponsors
 const sponsors = [
-  { name: "NIKE", tier: "title" },
-  { name: "GATORADE", tier: "title" },
-  { name: "GARMIN", tier: "gold" },
-  { name: "ASICS", tier: "gold" },
-  { name: "GoPro", tier: "gold" },
-  { name: "Fitbit", tier: "silver" },
-  { name: "Clif Bar", tier: "silver" },
-  { name: "Nuun", tier: "silver" },
+  { name: "Decathlon", tier: "title" },
+  { name: "Hindustan Dry Fruit Center", tier: "title" },
+  { name: "HP", tier: "gold" },
+  { name: "No Escape", tier: "gold" },
+  { name: "Red Bull", tier: "silver" },
+  { name: "Cloud9", tier: "silver" },
 ];
 
 const Sponsors = () => {
@@ -35,7 +33,7 @@ const Sponsors = () => {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center"
         >
-          <span className="label-athletic text-muted-foreground">Our Partners</span>
+          <span className="label-athletic text-muted-foreground">Past Sponsors</span>
         </motion.div>
 
         {/* Title Sponsors */}
@@ -107,20 +105,6 @@ const Sponsors = () => {
           ))}
         </motion.div>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 text-center"
-        >
-          <a
-            href="#"
-            className="font-body text-sm text-muted-foreground underline decoration-muted-foreground/30 underline-offset-4 transition-colors duration-300 hover:text-foreground hover:decoration-foreground"
-          >
-            Interested in sponsoring? Get in touch →
-          </a>
-        </motion.div>
       </div>
     </section>
   );
