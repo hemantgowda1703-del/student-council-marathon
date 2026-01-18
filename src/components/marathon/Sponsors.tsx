@@ -61,7 +61,7 @@ const Sponsors = () => {
               <img
                 src={sponsor.logo}
                 alt={sponsor.name}
-                className="h-16 w-auto object-contain opacity-70 transition-opacity duration-300 hover:opacity-100 md:h-20"
+                className="h-12 w-auto max-w-[120px] object-contain opacity-70 transition-opacity duration-300 hover:opacity-100 md:h-14 md:max-w-[140px]"
               />
             </motion.div>
           ))}
@@ -88,7 +88,7 @@ const Sponsors = () => {
               <img
                 src={sponsor.logo}
                 alt={sponsor.name}
-                className="h-12 w-auto object-contain opacity-60 transition-opacity duration-300 hover:opacity-100 md:h-14"
+                className="h-12 w-auto max-w-[120px] object-contain opacity-70 transition-opacity duration-300 hover:opacity-100 md:h-14 md:max-w-[140px]"
               />
             </motion.div>
           ))}
@@ -112,7 +112,7 @@ const Sponsors = () => {
               <img
                 src={sponsor.logo}
                 alt={sponsor.name}
-                className="h-10 w-auto object-contain opacity-50 transition-opacity duration-300 hover:opacity-100 md:h-12"
+                className="h-12 w-auto max-w-[120px] object-contain opacity-70 transition-opacity duration-300 hover:opacity-100 md:h-14 md:max-w-[140px]"
               />
             </motion.div>
           ))}
