@@ -35,6 +35,28 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-secondary/60 via-transparent to-secondary/40" />
       </div>
 
+      {/* Sustainability Theme Banner */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.1 }}
+        className="absolute left-0 right-0 top-24 md:top-28 z-20"
+      >
+        <div className="container-editorial">
+          <div className="inline-flex flex-col items-start gap-1 rounded-sm bg-gradient-to-r from-cream/95 via-cream/90 to-cream/80 px-6 py-4 backdrop-blur-sm shadow-lg border-l-4 border-primary">
+            <span className="font-display text-lg md:text-2xl font-bold uppercase tracking-wider text-secondary">
+              Run For Sustainability
+            </span>
+            <span className="font-display text-xl md:text-3xl font-black uppercase tracking-wide bg-gradient-to-r from-primary via-orange-500 to-secondary bg-clip-text text-transparent">
+              The Global Goals
+            </span>
+            <span className="font-body text-sm md:text-base text-secondary/80 italic">
+              For Sustainable Development
+            </span>
+          </div>
+        </div>
+      </motion.div>
+
       {/* Content */}
       <div className="container-editorial relative z-10 flex h-full flex-col justify-end pb-20 md:pb-28">
         {/* Event Badge */}
