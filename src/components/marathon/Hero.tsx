@@ -40,17 +40,17 @@ const Hero = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
-        className="absolute left-0 right-0 top-24 md:top-32 z-20"
+        className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-20 pointer-events-none"
       >
         <div className="container-editorial flex justify-center">
-          <div className="text-center">
-            <p className="font-cursive text-2xl md:text-4xl lg:text-5xl text-cream drop-shadow-lg" style={{ fontFamily: "'Pacifico', cursive" }}>
+          <div className="text-center space-y-2">
+            <p className="font-display text-xl md:text-3xl lg:text-4xl font-semibold uppercase tracking-[0.2em] text-cream/90 drop-shadow-md">
               Run For Sustainability
             </p>
-            <p className="font-cursive text-3xl md:text-5xl lg:text-6xl text-primary font-bold mt-1 drop-shadow-lg" style={{ fontFamily: "'Pacifico', cursive" }}>
+            <p className="font-display text-2xl md:text-4xl lg:text-5xl font-bold uppercase tracking-[0.15em] text-primary drop-shadow-lg">
               The Global Goals
             </p>
-            <p className="font-cursive text-lg md:text-2xl lg:text-3xl text-cream/90 mt-1 drop-shadow-md" style={{ fontFamily: "'Pacifico', cursive" }}>
+            <p className="font-body text-sm md:text-lg lg:text-xl tracking-[0.3em] uppercase text-cream/70">
               For Sustainable Development
             </p>
           </div>
