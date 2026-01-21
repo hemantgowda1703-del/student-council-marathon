@@ -40,19 +40,19 @@ const Hero = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
-        className="absolute left-0 right-0 top-24 md:top-28 z-20"
+        className="absolute left-0 right-0 top-24 md:top-32 z-20"
       >
-        <div className="container-editorial">
-          <div className="inline-flex flex-col items-start gap-1 rounded-sm bg-gradient-to-r from-cream/95 via-cream/90 to-cream/80 px-6 py-4 backdrop-blur-sm shadow-lg border-l-4 border-primary">
-            <span className="font-display text-lg md:text-2xl font-bold uppercase tracking-wider text-secondary">
+        <div className="container-editorial flex justify-center">
+          <div className="text-center">
+            <p className="font-cursive text-2xl md:text-4xl lg:text-5xl text-cream drop-shadow-lg" style={{ fontFamily: "'Pacifico', cursive" }}>
               Run For Sustainability
-            </span>
-            <span className="font-display text-xl md:text-3xl font-black uppercase tracking-wide bg-gradient-to-r from-primary via-orange-500 to-secondary bg-clip-text text-transparent">
+            </p>
+            <p className="font-cursive text-3xl md:text-5xl lg:text-6xl text-primary font-bold mt-1 drop-shadow-lg" style={{ fontFamily: "'Pacifico', cursive" }}>
               The Global Goals
-            </span>
-            <span className="font-body text-sm md:text-base text-secondary/80 italic">
+            </p>
+            <p className="font-cursive text-lg md:text-2xl lg:text-3xl text-cream/90 mt-1 drop-shadow-md" style={{ fontFamily: "'Pacifico', cursive" }}>
               For Sustainable Development
-            </span>
+            </p>
           </div>
         </div>
       </motion.div>
